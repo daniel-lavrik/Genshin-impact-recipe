@@ -1,0 +1,493 @@
+/*Pour la police d'écriture google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins" , sans-serif;
+    box-sizing: border-box;
+    transition: all.2s linear;
+    text-decoration: none;
+    border: none;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7em;
+    scroll-behavior: smooth;
+}
+
+.Logo { /* affiche genshin impact food en haut a droite */
+    font-size: 250%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(45deg, #001433, #00e1ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block; /* Pour s'assurer que le dégradé s'applique correctement au texte */
+  }
+
+.Logo2 { /* affiche genshin impact food en bas a droite */
+    font-size: 250%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(45deg, #ffffff, #00e1ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block; /* Pour s'assurer que le dégradé s'applique correctement au texte */
+  }
+body {
+    position: relative;
+}
+header { /* créer la banniere tout en haut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;/* Permet de mettre la banniere au premier plan */
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 4%;
+    height: 50px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+.menu {
+    display: flex;
+}
+.menu li {
+    list-style: none;
+    margin: 0 50px;/* espacement entre les differents elements */
+    padding-top: 1%;
+}
+.menu li a {
+    font-size: 18px;
+    color: #000;
+    font-weight: 9000;
+    transition: 0.2s;
+}
+.menu li a:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #001433, #00e1ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block; /* Pour s'assurer que le dégradé s'applique correctement au texte */
+}
+
+#home {
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+/*Scrollbar CSS*/
+
+::-webkit-scrollbar { /*definit la taille de la barre de scroll */
+    width: 12px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(45deg, #001433, #00e1ff);/*definit la barre de scroll avec un degrader de couleurs */
+}
+
+#home .left {
+    width: 40%;
+}
+#home .left h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+#home .left h1 span {
+    background: linear-gradient(45deg, #001433, #00e1ff);/*permet d'afficher genshin impact food avec un degrader de couleurs */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block; /* Pour s'assurer que le dégradé s'applique correctement au texte */
+}
+#home .left p {
+    margin-bottom: 30px;
+    color: #999;
+    font-size: 13px;
+}
+#home .left a {
+    background: linear-gradient(45deg, #001433, #00e1ff);/*permet d'afficher accéder au recettes avec un degrader de couleurs en fond et une ecriture de couleur blanche */
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.5s;
+}
+#home .left a:hover {
+    background: linear-gradient(45deg, #00e1ff, #001433);/*permet d'afficher accéder au recettes avec un degrader de couleurs en fond et une ecriture de couleur blanche */
+}
+#home .right { /*creer la classe pour afficher et placer paimon edit en css */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home .right img { /*permet de definir la taille de l'image (paimon) */
+    width: 40%;
+}
+
+#lesrecettes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section_title {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 25px;
+}
+.section_title:before {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    content: "";
+    background: linear-gradient(45deg, #001433, #00e1ff);
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+}
+.section_title:after {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    content: "";
+    background: linear-gradient(45deg, #00e1ff, #001433);
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+}
+.images {
+    margin: 100px auto;
+    padding: 0 8%;
+}
+.images ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.images li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4.665%;
+    transition: 0.5s;
+    height: 400px;
+    width: 40%;
+}
+
+.images li div {/* definit l'arriere plan des images des recettes ainsi que leur tailles */
+    background-color: #979797;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.images li div img {
+    height: 100%;
+    width: 100%;
+}
+
+.images li a:hover {
+    transform: scale(1.2);
+}
+.images li span {
+    color: #000;
+    font-size: 18px;
+}
+#lesrecettes li span.nom { /* donne le nom de la recette */
+    background: linear-gradient(45deg, #001433, #00e1ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block; /* Pour s'assurer que le dégradé s'applique correctement au texte */
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+#lesrecettes li a { /* Pour afficher voir la recette juste en dessous des recettes*/
+    background: linear-gradient(45deg, #001433, #00e1ff);
+    color: #ffffff;
+    padding: 5px 20px;
+    margin-top: 15px;
+    font-size: 15px;
+}
+#propos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+.list_services {
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.propos {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 0 50px rgba(0,0,0,0.3);
+    padding: 20px;
+    margin: 20px;
+}
+.propos i { /* affiche le cercle */
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #001433, #00e1ff);
+    color: #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.propos h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.propos p { /* texte en paragraphe de propros */
+    font-size: 12px;
+}
+.propos a { /* bouton acceuil*/
+    transform: scale(1.2);
+    border-radius: 50%;
+    margin-top: 10px;
+    background: linear-gradient(45deg, #001433, #00e1ff);
+    padding: 5px 20px;
+    border: 1px solid #000000;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.propos a:hover { /* bouton acceuil*/
+    transform: scale(1.6);
+}
+#contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 12%;
+    
+}
+.localisation_contact_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 100px 0;
+    height: 80vh;
+}
+.localisation {
+    width: 49%;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.localisation iframe {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.localisation_contact_div .form_contact {
+    width: 49%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 6px;
+}
+.localisation_contact_div h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.localisation_contact_div .form_contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.form_contact form input , textarea {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px;
+    outline: 0;
+    border-radius: 6px;
+    font-size: 15px;
+    resize: none;
+}
+.form_contact form input[type="submit"]{
+    margin-bottom: 0;
+    background: linear-gradient(45deg, #001433, #00e1ff);
+    color: #fff;
+    border: 0;
+}
+footer {
+    background: linear-gradient(45deg, #001433, #00e1ff);
+    text-align: center;
+    padding: 10px 4%;
+    color: #ffffff;
+    font-size: 14px;
+}
+.menu_toggle {
+    display: none;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 10px 4%;
+    height: 60px;
+    justify-content: space-between;
+}
+.footer li {
+    list-style: none;
+    padding: 10px 2%;
+}
+.footer li a {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 9000;
+    transition: 0.2s;
+}
+.footer li a:hover {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #ffffff, #00e1ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block; /* Pour s'assurer que le dégradé s'applique correctement au texte */
+}
+
+/*Responsive*/
+@media (max-width:682px) {
+    header {
+        padding: 0 10px;
+    }
+    header .menu {
+        display: none;
+    }
+    #home {
+        padding:  0 10px;
+        justify-content: center;
+        flex-direction: column;
+    }
+     #home .left ,   #home .right {
+        width: 100%;
+    }
+    #home h1 {
+        margin-top: 100px;
+    }
+    .right {
+        margin-top: 50px;
+        width: 60%;
+    }
+    .images li {
+        width: 100%;
+    }
+    #propos {
+        padding: 0 10px;
+    }
+    .propos {
+        width: 100%;
+    }
+    #contact {
+        height: auto;
+    }
+    .localisation_contact_div {
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+    }
+    .localisation{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .localisation_contact_div .form_contact {
+        width: 100%;
+        
+    }
+    .menu_toggle {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .menu_toggle span {
+       width: 35px;
+       background: linear-gradient(45deg, #001433, #00e1ff);
+       height: 5px;
+       border-radius: 6px;
+       transition: 0.5s;
+    }
+    .menu_toggle span.active {
+        width: 0px;
+    }
+    .menu_toggle::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 5px;
+        background: linear-gradient(45deg, #001433, #00e1ff);
+        transform:translateY(10px);
+        border-radius: 6px;
+        transition: 0.5s;
+    }
+    .menu_toggle.active::before {
+        width: 28px;
+        transform: rotate(45deg);
+    }
+    .menu_toggle::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 5px;
+        background: linear-gradient(45deg, #001433, #00e1ff);
+        transform:translateY(-10px);
+        border-radius: 6px;
+        transition: 0.5s;
+    }
+    .menu_toggle.active::after {
+        width: 28px;
+        transform: rotate(-45deg);
+    }
+    header .menu.responsive {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        z-index: 2;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+   
+
+
+}
